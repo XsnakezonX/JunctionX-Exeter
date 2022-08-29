@@ -1,0 +1,481 @@
+<html>
+ 
+<head>
+  <title>JunctionX Exeter</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="icon" href="favicon.png">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+</head>
+<style>
+  body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .header {
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  .front-cover {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+  }
+
+  .front-cover-info {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .front-cover-logo {
+    width: 550px;
+    max-width: 80%;
+  }
+
+  .header-social-icons {
+    margin: 20px;
+  }
+
+  .icon {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .icon-sponsor {
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .sponsors {
+    text-align: center;
+  }
+
+  .vid-box {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0px;
+  }
+
+  .youtube-vid {}
+
+  @media screen and (min-width: 650px) {
+    .vid-box {
+      padding-left: 25%;
+      padding-right: 25%;
+    }
+  }
+
+  .footer-copyright {
+    text-align: center;
+  }
+
+  .schedule-button {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .where iframe {
+    width: 100%;
+  }
+
+  .footer-text {
+    margin-top: 20px;
+    color: rgba(250, 250, 250, .6);
+  }
+
+  .track-reveal .collapsible {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+</style>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyD_Tj3-GoZCYa2gsCRycoJi_8OL8aOTqq8",
+    authDomain: "junctionx-exeter.firebaseapp.com",
+    projectId: "junctionx-exeter",
+    storageBucket: "junctionx-exeter.appspot.com",
+    messagingSenderId: "144267561736",
+    appId: "1:144267561736:web:6928e04941f252e3e97abd",
+    measurementId: "G-T0W91B5H0C"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper deep-purple darken-4">
+      <a href="" class="brand-logo"><img height="60" width="60" src="JunctionX_logos-emblem-white.svg"></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="schedule.pdf" download target="_blank">Schedule</a></li>
+        <li><a href=" #location">Location</a></li>
+        <li><a href="#prizes">Prizes</a></li>
+        <li><a href="#promo">Trailer</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="front-cover">
+    <div class="header">
+      <img class="header" src="website-photo.jpg">
+    </div>
+
+    <div class="front-cover-info">
+      <img class="front-cover-logo" src="junctionx_exeter_logo_white_twoline.png">
+
+      <div>
+        <p>21-23 February 2020</p>
+        <p>Europe's Largest Hackathon, now in Exeter</p>
+      </div>
+
+      <div class="registe-buttons">
+        <!-- <a class="waves-effect waves-light btn deep-purple darken-4" href="https://forms.gle/imxS8VZ2bSM1oBVE9"
+          target="_blank">Register Now</a>
+        <br><br>
+        <a class="waves-effect waves-light btn deep-purple darken-4"
+          href="https://exeentrepreneursoc.typeform.com/to/CxaMhe" target="_blank">Become a Volunteer</a> -->
+        <!-- <a class="waves-effect waves-light btn deep-purple darken-4"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSet2oVXD9yJiezMJkixQBOii1hhnWE1u0kDrgHPo8fkYp0dqg/viewform?usp=sf_link"
+          target="_blank">Submit Outline | Anytime on Saturday!</a> -->
+        <!-- <a class="waves-effect waves-light btn deep-purple darken-4"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdPcYbzI3JvFxHgjknraphjZr04MV49jUfp8zRsveJ70J0bYA/viewform"
+          target="_blank">Research Questionnaire | Every Team Member To Complete</a>
+        <br><br> -->
+        <!-- <a class="waves-effect waves-light btn deep-purple darken-4"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScpXhn_0slRSmDURBuTsgNrbISBDxPwO61mBRcDvyHc8bmdsg/viewform?usp=sf_link"
+          target="_blank">Submit Project | Deadline 1pm Sunday 23rd</a>
+        <br><br> -->
+        <!-- <a class="waves-effect waves-light btn deep-purple darken-4"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScE1i4DzlSsE6u2KoSqM3cdNyjrfz6CPEM7EcjAWVAaoXnFLQ/viewform?usp=sf_link"
+          target="_blank">Peer Voting System</a>
+        <br><br> -->
+        <a class="waves-effect waves-light btn deep-purple darken-4"
+          href="https://docs.google.com/presentation/d/18xgX2cT0A9VK8wSW_TIPMtJu9OZI1CGxkY_Qnq9AIcU/edit?usp=sharing"
+          target="_blank">Pitching Workshop + Criteria</a>
+      </div>
+
+      <div class="header-social-icons">
+        <a href="https://www.facebook.com/events/2687054858028437/" target="_blank"><img class="icon"
+            src="facebook.svg"></a>
+        <a href="https://www.instagram.com/junctionx.exeter" target="_blank"><img class="icon" src="instagram.svg"></a>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="schedule-button">
+      <a class="waves-effect waves-light btn deep-purple darken-4" href="schedule.pdf" download target="_blank">Download
+        Schedule</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="sponsors">
+      <p>Supported by some seriously amazing people</p>
+      <a class="" href="https://www.linkedin.com/showcase/student-startups/" target="_blank"><img class="icon-sponsor"
+          src="student-startups.png" /></a>
+      <a class="" href="https://techexeter.uk/" target="_blank"><img class="icon-sponsor" src="tech-exeter.svg" /></a>
+      <a class="" href="https://www.heytempo.com/" target="_blank"><img class="icon-sponsor" src="tempo.jpeg" /></a>
+      <a class="" href="https://www.accenture.com/" target="_blank"><img class="icon-sponsor"
+          src="accenture.jpeg" /></a>
+      <a class="" href="https://www.exeter.ac.uk/" target="_blank"><img class="icon-sponsor"
+          src="University-of-Exeter-logo.png" /></a>
+
+    </div>
+  </div>
+
+  <div class="vid-box">
+
+    <style>
+      .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+      }
+
+      .embed-container iframe,
+      .embed-container object,
+      .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <div id="promo" class='embed-container z-depth-5'><iframe src='https://www.youtube.com/embed/lL8wQUljpMs?controls=0'
+        frameborder='0' allowfullscreen></iframe>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="card" id="what">
+          <div class="card-image">
+            <div class="where">
+              <img src="what.jpg">
+            </div>
+          </div>
+          <div class="card-content">
+            <p><b>What is JunctionX Exeter?</b></p>
+            <p>One of the largest UK university hackathons with over 300 participants. The event will be
+              held on 21-23 February 2020. Our sponsors have created various Challenges you can choose
+              from! You have 52 hours to create an exciting solution to your Challenge.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="card" id="location">
+          <div class="card-image">
+            <div class="where">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6613.02607715997!2d-3.5380223771712735!3d50.734005651576354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486da44644db2a5f%3A0xaa38ffa601deb95b!2sRoborough%2C%20Prince%20of%20Wales%20Rd%2C%20Exeter%20EX4%204SB!5e0!3m2!1sen!2suk!4v1576492260495!5m2!1sen!2suk"
+                frameborder="0" style="border:0;width:100%;height:200px;" allowfullscreen=""></iframe>
+            </div>
+          </div>
+          <div class="card-content">
+            <p><b>Location</b></p>
+            <p>Roborough Studios, originally built as the University Library in 1940, offers three
+              large rehearsal spaces, fully equipped for lighting and sound. The spaces can be opened up
+              into
+              one huge flat-floored performance space. This makes for the perfect JunctionX Exeter venue.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="card" id="prizes">
+          <div class="card-image">
+            <div class="where">
+              <img src="prizes.jpg">
+            </div>
+          </div>
+          <div class="card-content">
+            <p><b>Prizes</b></p>
+            <p>
+              You can select from various Challenges each with it's own Challenge prize. The overall
+              winner of the entire hackathon receives £1,000 and a Golden ticket to Finland!
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="width:100%;">
+      <div class="col s12 m1"></div>
+      <div class="col s12 m10">
+        <div class="card" id="prizes">
+          <div class="card-image">
+            <div class="where">
+              <img src="junctionx.jpeg">
+            </div>
+          </div>
+          <div class="card-content">
+            <p><b>What is JunctionX?</b></p>
+            <p>
+              Junction is a global hackathon and tech community, spreading the word of empowering people to create with
+              technology. The JunctionX program was created for local tech communities around the world to have a way to
+              create their own hackathon, and bring developers, designers and all other techies together. All JunctionX
+              events are individual events created by the local community, supported by Junction.
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m1 center"></div>
+
+    </div>
+
+    <hr>
+  </div>
+
+
+  <!-- Tracks -->
+  <div class="container track-reveal">
+    <h2>Track Reveal</h2>
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="card" id="location">
+          <div class="card-image">
+            <div class="where">
+              <iframe src='https://www.youtube.com/embed/f4FPK3bwNV8?controls=0' frameborder='0'
+                allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="card-content">
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header">
+                  <p><b>Mental Health</b></p>
+                </div>
+                <div class="collapsible-body"><span>
+                    <p>Nearly half of adults in the UK think they have had a diagnosable mental health condition at some
+                      point
+                      in their life. In a 2014 study, over a third of people who self identified as having a mental
+                      health
+                      problem have never been diagnosed by a professional. 20 percent of people in the UK aged 16 or
+                      older
+                      showed symptoms of anxiety or depression. Do you think you can rise to the challenge and change
+                      the face
+                      of mental health?
+                    </p>
+                  </span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="card" id="location">
+          <div class="card-image">
+            <div class="where">
+              <iframe src='https://www.youtube.com/embed/SzVzuCtxBb8?controls=0' frameborder='0'
+                allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="card-content">
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header">
+                  <p><b>Sustainability</b></p>
+                </div>
+                <div class="collapsible-body"><span>
+                    <p>Forrests cover nearly 30 percent of the world's land area. But they're dissapearing at an
+                      alarming rate.
+                      Over the past 30 years the Earth has lost over 1.3 million square kilometres of forrest. Should
+                      the global
+                      population reach 9.6 billion by 2050, the equivalent of over 3 planets will be required to provide
+                      the
+                      natural resources needed to sustain our lifestyles. The food sector accounts for about 30 percent
+                      of the
+                      world's total energy consumption and nearly 22 percent of total greenhouse gas emissions. Does
+                      your team
+                      have what it takes to beat the competition and create a revolutionary product?
+                    </p>
+                  </span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="card" id="location">
+          <div class="card-image">
+            <div class="where">
+              <iframe src='https://www.youtube.com/embed/vDBSyckhz1E?controls=0' frameborder='0'
+                allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="card-content">
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header">
+                  <p><b>Transport</b></p>
+                </div>
+                <div class="collapsible-body"><span>
+                    <p>20% of all flights are over 15 minutes late mostly due to reactionary causes. There are over 1.7
+                      billion
+                      journeys on the national rail network every year; the average age of a given train on the UK
+                      railways is
+                      19.2 years. Whilst only 1 percent of food is transported by air it accounts for 11 percent of
+                      carbon
+                      emissions. The number of electric vehicles rose to 5.6 million world-wide at the beginning of
+                      2019.
+                      Improve the transport networt. Disrupt our current modes of transport. Can you overcome the
+                      challenge?
+                    </p>
+                  </span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="page-footer deep-purple darken-4">
+    <div class="footer-copyright">
+      <div class="container">
+        <a class="" href="https://www.facebook.com/events/2687054858028437/" target="_blank"><img class="icon"
+            src="facebook.svg"></a>
+        <a class="" href="https://www.instagram.com/junctionx.exeter" target="_blank"><img class="icon"
+            src="instagram.svg"></a>
+        <br>
+        <div class="footer-text">
+          © 2019-20 Adriano Matousek
+          <br>
+          <br>
+          <b>Promotional Videos</b>
+          <br>
+          VFX: Jess Melaragni (@jessmelx)
+          <br>
+          Directing: Louis Evans
+          <br>
+          Videography: Daiki Shinomiya, Baudouin Buddy Baugé
+          <br>
+          <br>
+          Designed and developed with 💕 & ☕ by Adriano
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems, {});
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function () {
+    $('.collapsible').collapsible();
+  });
+
+</script>
+
+</html>
