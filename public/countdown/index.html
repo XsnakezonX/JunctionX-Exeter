@@ -47,7 +47,7 @@
     font-size: 20px;
     color: white;
     position: absolute;
-    top: 5%;
+    top: 0%;
     width: 100%;
     text-align: center;
   }
@@ -102,9 +102,8 @@
   #countdown-logo{
     /* width: auto;
     height: auto; */
-    position: relative;
-    background-repeat:no-repeat;
-    background-size:500% 50vh;
+    width: 580px;
+    max-width: 80%;
     /* text-align: center; */
   }
 
@@ -115,15 +114,12 @@
     }
 
     #counting{
-    font-size: 12rem; /* 18px */
-    font-family: 'montserrat-extra-bold', sans-serif;
+      padding-top: 0%;
+      font-size: 12rem; /* 18px */
+      font-family: 'montserrat-extra-bold', sans-serif;
     }
 
-    #countdown-logo{
-      /* width: auto;
-      height: auto; */
-      /* margin-top: 0%; */
-    }
+    
 
   }
 
@@ -197,6 +193,21 @@
      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)+(days*24));
      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    //  if days < 10, add a 0 in front
+    if (days < 10) {
+      days = ("0" + days).slice(-2);
+    }
+    if (hours < 10) {
+      hours = ("0" + hours).slice(-2);
+    }
+    if (minutes < 10) {
+      minutes = ("0" + minutes).slice(-2);
+    }
+    if (seconds < 10) {
+      seconds = ("0" + seconds).slice(-2);
+    }
+
    
      // Display the result in the element with id="counting"
      document.getElementById("counting").innerHTML = hours + " : "
@@ -227,7 +238,7 @@
 
     <div class="front-cover-info">
       <p id="counting"></p>
-      <!-- <img id="countdown-logo" src="../junctionx_exeter_logo_white_oneline-removebg.png"> -->
+      <img id="countdown-logo" src="../junctionx_exeter_logo_white_oneline-removebg.png">
     </div>
         
   </div>
