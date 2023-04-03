@@ -1,0 +1,211 @@
+/* ================================================= */
+/* Custom properties */
+/* ================================================= */
+:root {
+	--page-bg: #3C3A47;
+
+	--primary-text: #F5F5F6;
+	--muted-text: #77757E;
+
+	--logo-fill: var(--primary-text);
+
+	--input-bg: #2D2C35;
+	--input-bg-hover: #24232b;
+	--input-border-focus: #1d1c23;
+	--input-text: var(--primary-text);
+	--input-placeholder: var(--muted-text);
+
+	--button-text: #D19361;
+	--button-text-hover: #faf4ef;
+
+	--icon-socials: var(--primary-text);
+	--icon-socials-hover: #b1b0b5;
+
+	--timer-bg: var(--input-bg-hover);
+	--timer-text-muted: var(--icon-socials-hover);
+
+	--default-border-radius: 8px;
+	--default-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out;
+}
+
+
+
+/* ================================================= */
+/* General styles */
+/* ================================================= */
+@font-face {
+	font-family: 'montserrat-extra-bold', sans-serif;
+	src: url(fonts\Montserrat-ExtraBold\Montserrat-ExtraBold.ttf)
+}
+
+html {
+	font-size: 112.5%; /* 18px */
+}
+
+body {
+	font-family: 'montserrat-extra-bold', sans-serif;
+	line-height: 1.5;
+	/* color: var(--primary-text); */
+	background-image: "../images/countdownBG.png";
+}
+
+h1 {
+	font-size: 2.4rem;
+	line-height: 1.3;
+	font-weight: 700;
+	margin: 2rem 0;
+}
+
+h2 {
+	font-size: 1.33rem;
+	line-height: 1.3;
+	font-weight: 700;
+	margin: 2rem 0;
+}
+
+h2.light {
+	font-weight: 400;
+}
+
+p {
+	margin: 0 0 1rem;
+}
+
+
+
+/* ================================================= */
+/* Forms */
+/* ================================================= */
+input {
+	background-color: var(--input-bg);
+	border-radius: var(--default-border-radius);
+	border: none;
+	padding: 1.333rem;
+	outline: none;
+	margin-bottom: 1rem;
+	width: 100%;
+	line-height: 1.5;
+	border: 1px solid var(--input-bg);
+	color: var(--input-text);
+	transition: var(--default-transition);
+}
+
+input::placeholder {
+	color: var(--input-placeholder);
+	transition: var(--default-transition);
+}
+
+input:hover {
+	background-color: var(--input-bg-hover);
+}
+
+input:focus {
+	border-color: var(--input-border-focus);
+}
+
+
+
+
+
+/* ================================================= */
+/* Timer running and timer end */
+/* ================================================= */
+/* #timer-running,
+#timer-end {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
+	position: absolute;
+	width: 100%;
+}
+
+
+#timer-end {
+	display: none;
+	opacity: 0;
+}
+
+#timer-end.visible {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	animation: fadeIn 1.6s forwards 1.6s;
+} */
+
+#timer-end h1 {
+	margin-top: 0;
+}
+
+#timer-end h2 {
+	margin: 0;
+}
+
+
+
+/* ================================================= */
+/* Main content */
+/* ================================================= */
+
+#timer-container{
+	background-color: var(--primary-text);
+	padding: 2rem;
+	margin: 0;
+	list-style: none;
+	border-radius: var(--default-border-radius);
+	color: var(--timer-text-muted);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+#timer-container span{
+	color: var(--primary-text);
+	font-size: 1.33rem;
+	line-height: 1.3;
+	font-weight: 700;
+	font-family: "montserrat-extra-bold", sans-serif;
+}
+
+#timer-container li:nth-child(even){
+	display: none;
+}
+
+
+/* ================================================= */
+/* 768px + */
+/* ================================================= */
+@media screen and (min-width: 768px) {
+	
+
+	#timer-container{
+		flex-direction: row;
+		text-align: center;
+		display: inline-flex;
+	}
+
+	#time-container span{
+		display: block;
+		font-size: 3.15rem;
+		line-height: 1.4;
+	}
+
+	#timer-container li:nth-child(odd){
+		min-width: 4rem;
+	}
+
+	#timer-container li:nth-child(even){
+		display: inline-block;
+		font-size: 2.4rem;
+		line-height: 1.3;
+		padding-top: .4rem;
+		font-weight: 300;
+	}
+
+	
+
+	h1,
+	h2 {
+		max-width: 30rem;
+	}
+}

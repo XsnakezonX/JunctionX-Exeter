@@ -1,21 +1,19 @@
-<html>
- 
-<head>
-  <title>JunctionX Exeter 2023 Countdown</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
+
+<!-- saved from url=(0038)https://junctionxexeter.com/countdown/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>JunctionX Exeter</title>
+  <link href="./i-ndex_files/css" rel="stylesheet">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./i-ndex_files/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <link rel="icon" href="favicon.png">
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="./i-ndex_files/materialize.min.js.download"></script><style type="text/css" id="operaUserStyle"></style>
+  <link rel="icon" href="https://junctionxexeter.com/countdown/favicon.png">
+  <script src="./i-ndex_files/jquery-3.4.1.min.js.download" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-</head>
 <style>
   body {
     padding: 0px;
@@ -30,24 +28,16 @@
   }
 
   .front-cover {
-    /* width: 100%;
+    width: 100%;
     height: 100%;
-    overflow-y: hidden; */
-    /* Full height */
-  /* height: 100%;  */
-
-  /* Center and scale the image nicely */
-  /* background-position: center; */
-  position: relative;
-  background-repeat:no-repeat;
-  background-size:100% 100vh;
+    overflow-y: hidden;
   }
 
   .front-cover-info {
     font-size: 20px;
     color: white;
     position: absolute;
-    top: 5%;
+    top: 20%;
     width: 100%;
     text-align: center;
   }
@@ -55,7 +45,6 @@
   .front-cover-logo {
     width: 550px;
     max-width: 80%;
-
   }
 
   .header-social-icons {
@@ -88,43 +77,11 @@
 
   .youtube-vid {}
 
-  @font-face {
-	font-family: 'montserrat-extra-bold', sans-serif;
-	src: url(fonts\Montserrat-ExtraBold\Montserrat-ExtraBold.ttf)
-  }
-
-  #counting{
-  text-align: center;
-	font-size: 5rem; /* 18px */
-  font-family: 'montserrat-extra-bold', sans-serif;
-  }
-
-  #countdown-logo{
-    /* width: auto;
-    height: auto; */
-    position: relative;
-    background-repeat:no-repeat;
-    background-size:500% 50vh;
-    /* text-align: center; */
-  }
-
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 650px) {
     .vid-box {
       padding-left: 25%;
       padding-right: 25%;
     }
-
-    #counting{
-    font-size: 12rem; /* 18px */
-    font-family: 'montserrat-extra-bold', sans-serif;
-    }
-
-    #countdown-logo{
-      /* width: auto;
-      height: auto; */
-      /* margin-top: 0%; */
-    }
-
   }
 
   .footer-copyright {
@@ -150,12 +107,7 @@
     box-shadow: none;
     -webkit-box-shadow: none;
   }
-
-  
-
-</style>
-
-<script type="module">
+</style><script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-analytics.js";
@@ -177,9 +129,7 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-</script>
-
-<script>
+</script><script>
    // Set the date we're counting down to
    var countDownDate = new Date("Apr 5, 2023 12:00:00").getTime();
    
@@ -194,13 +144,13 @@
    
      // Time calculations for days, hours, minutes and seconds
      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)+(days*24));
+     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
    
      // Display the result in the element with id="counting"
-     document.getElementById("counting").innerHTML = hours + " : "
-     + minutes + " : " + seconds + "   ";
+     document.getElementById("counting").innerHTML = days + "d " + hours + "h "
+     + minutes + "m " + seconds + "s ";
    
      // If the count down is finished, write some text
      if (distance < 0) {
@@ -208,31 +158,63 @@
        document.getElementById("counting").innerHTML = "End of Hacking!!!";
      }
    }, 1000);
-   </script>
+</script><script src="./i-ndex_files/js" async=""></script></head>
+
+
+
+
+
 
 <body>
-  <!-- <div id="timer-running">
-    <div id="main-content">
-
-      
-      <p id="counting"></p>
-      <img id="countdown-logo" src="../junctionx_exeter_logo_white_oneline-removebg.png">
-        
-    </div>
-  </div> -->
   <div class="front-cover">
     <div class="header">
-      <img class="header" src="images\countdownBG.png">
+      <img class="header" src="./i-ndex_files/countdownBG.png">
     </div>
 
     <div class="front-cover-info">
-      <p id="counting"></p>
-      <!-- <img id="countdown-logo" src="../junctionx_exeter_logo_white_oneline-removebg.png"> -->
-    </div>
-        
-  </div>
-  
-</body>
-<!-- <script src="js/app.js"></script> -->
+      <!-- <img class="front-cover-logo" src="junctionx_exeter_logo_white_twoline.png"> -->
 
-</html>
+      <div>
+         <div id="timer-running">
+		
+
+            <div id="main-content">
+      
+               
+               <!-- <ul id="timer-container">
+               
+                  <li id="days" role="timer">0 days</li>
+                  <li >:</li>
+                  <li id="hours" role="timer">0 hours</li>
+                  <li >:</li>
+                  <li id="minutes" role="timer">0 minutes</li>
+                  <li >:</li>
+                  <li id="seconds" role="timer">0 seconds</li>
+                  
+               </ul> -->
+               <!-- <span id="counting"></span> -->
+               <p id="counting">2d 9h 41m 5s </p>
+               
+      
+            </div> <!-- end main-content -->
+      
+            
+         </div> <!-- end timer-running -->
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+ 
+
+
+
+  
+
+
+
+</body><!-- <script src="js/app.js"></script> --></html>
