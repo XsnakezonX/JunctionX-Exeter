@@ -223,8 +223,57 @@
     // console.log(now); 
 
     // a series of session date variables
-    var dayLunchDate = new Date("Apr 4, 2023 12:30:00").getTime();
-    var dayOutlineDate = new Date("Apr 5, 2023 17:00:00").getTime();
+    var day2WorkshopDate = new Date("Apr 4, 2023 11:00:00").getTime();
+    var day2LunchDate = new Date("Apr 4, 2023 12:30:00").getTime();
+    var day2OutlineDate = new Date("Apr 5, 2023 17:00:00").getTime();
+    var day2DinnerDate = new Date("Apr 5, 2023 19:30:00").getTime();
+    var day3SubmissionDate = new Date("Apr 5, 2023 12:30:00").getTime();
+    var day3AtosDate = new Date("Apr 5, 2023 12:35:00").getTime();
+    var day3LunchDate = new Date("Apr 5, 2023 13:00:00").getTime();
+    var day3PitchingDate = new Date("Apr 5, 2023 14:00:00").getTime();
+    var day3AnnounceWinners = new Date("Apr 5, 2023 17:00:00").getTime();
+    var day3Close = new Date("Apr 5, 2023 17:45:00").getTime();
+
+    // a list of session date variables
+    var sessionDateList = [day2WorkshopDate, day2LunchDate, day2OutlineDate, 
+                          day2DinnerDate, day3SubmissionDate, day3AtosDate, 
+                          day3LunchDate, day3PitchingDate, day3AnnounceWinners, 
+                          day3Close, "TheEnd"];
+
+    // a list of session names
+    var sessionNameList = ["Day 2 Workshop: 11:00 - 11:45", "Day 2 Lunch: 12:30 - 13:30", 
+                          "Project Outline & Submission Open: 17:00", "Day 2 Dinner: 19:30 - 20:00", 
+                          "Submission Deadline: 12:30", "Careers at Atos", "Day 3 Lunch", 
+                          "Track Pitching: 14:00 - 16:30", "Winners Announced: 17:00 - 17:30", 
+                          "Closing Ceremony", "-"];
+
+    var nextSessionName; // the next session variable placeholder
+    var currentSessionName; // the current session variable placeholder
+
+    // Find the distance between now and one of the session date
+    for(var i = 0; i < sessionDateList.length; i++) {
+      if (sessionDateList[i-1] == "TheEnd"){
+        break;  // break out of the loop if the sessionDateList is "end"
+      }
+      var sessionDistance = sessionDateList[i] - now;
+      if (sessionDistance < 0) {
+        continue;
+        // var currentSession = sessionDateList[i];
+        // break
+      } else {
+        // var nextSession = sessionDateList[i+1];
+        currentSessionName = sessionNameList[i-1];
+        nextSessionName = sessionNameList[i];
+        break;
+      }
+    }
+
+    document.getElementById("next-session").innerHTML = nextSessionName;
+    document.getElementById("current-session").innerHTML = currentSessionName;
+
+    // console.log(currentSession);
+    // console.log(nextSession);
+    
 
   }, 1000);
 
@@ -248,7 +297,11 @@
     <div class="front-cover-info">
       <p id="counting"></p>
       <img id="countdown-logo" src="../junctionx_exeter_logo_white_oneline-removebg.png">
+      <p id="next-session-msg">Next Session:</p>
       <p id="next-session"></p>
+      <p id="current-session-msg">Current Session:</p>
+      <p id="current-session"></p>
+      
     </div>
         
   </div>
