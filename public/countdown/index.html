@@ -176,25 +176,25 @@
 </script>
 
 <script>
-   // Set the date we're counting down to
-   var countDownDate = new Date("Apr 5, 2023 12:30:00").getTime();
+  // Set the date we're counting down to
+  var countDownDate = new Date("Apr 5, 2023 12:30:00").getTime();
    
-   // Update the count down every 1 second
-   var x = setInterval(function() {
+  // Update the count down every 1 second
+  var x = setInterval(function() {
    
-     // Get today's date and time
-     var now = new Date().getTime();
+    // Get today's date and time
+    var now = new Date().getTime();
    
-     // Find the distance between now and the count down date
-     var distance = countDownDate - now;
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
    
-     // Time calculations for days, hours, minutes and seconds
-     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)+(days*24));
-     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)+(days*24));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-    //  if days < 10, add a 0 in front
+    //  if date digit < 10, then add a 0 in front
     if (days < 10) {
       days = ("0" + days).slice(-2);
     }
@@ -209,17 +209,22 @@
     }
 
    
-     // Display the result in the element with id="counting"
-     document.getElementById("counting").innerHTML = hours + " : "
-     + minutes + " : " + seconds + "   ";
+    // Display the result in the element with id="counting"
+    document.getElementById("counting").innerHTML = hours + " : "
+    + minutes + " : " + seconds + "   ";
    
-     // If the count down is finished, write some text
-     if (distance < 0) {
-       clearInterval(x);
-       document.getElementById("counting").innerHTML = "End of Hacking!!!";
-     }
-   }, 1000);
-   </script>
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("counting").innerHTML = "End of Hacking!!!";
+    }
+
+    // print the current date time with var now
+    console.log(now); 
+
+  }, 1000);
+
+</script>
 
 <body>
   <!-- <div id="timer-running">
