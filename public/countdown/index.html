@@ -50,6 +50,7 @@
     top: 0%;
     width: 100%;
     text-align: center;
+    padding-top: 0%;
   }
 
   .front-cover-logo {
@@ -107,6 +108,15 @@
     /* text-align: center; */
   }
 
+  #current-session-msg, #current-session, 
+  #next-session,#next-session-msg{
+    /* padding-top: 0%; */
+    font-size: 2rem; /* 18px */
+    font-family: 'montserrat-bold', sans-serif;
+    /* line-height: 1.5em; */
+    /* margin:0em; */
+  }
+
   @media screen and (min-width: 768px) {
     .vid-box {
       padding-left: 25%;
@@ -117,37 +127,35 @@
       padding-top: 0%;
       font-size: 12rem; /* 18px */
       font-family: 'montserrat-extra-bold', sans-serif;
+      margin:0em;
     }
+
+    #current-session, 
+    #next-session,#next-session-msg{
+      padding-top: 0%;
+      font-size: 4rem; /* 18px */
+      font-family: 'montserrat-extra-bold', sans-serif;
+      /* line-height: 1.5em; */
+      margin:0em;
+    }
+
+    #current-session, #next-session-msg, #counting{
+      padding-top: 5%;
+    }
+
+    #countdown-logo{
+      border-radius: 3px;
+      height: auto;
+      max-width: 100%;
+  }
 
     
 
   }
 
-  .footer-copyright {
-    text-align: center;
-  }
-
-  .schedule-button {
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-  }
-
   .where iframe {
     width: 100%;
   }
-
-  .footer-text {
-    margin-top: 20px;
-    color: rgba(250, 250, 250, .6);
-  }
-
-  .track-reveal .collapsible {
-    box-shadow: none;
-    -webkit-box-shadow: none;
-  }
-
-  
 
 </style>
 
@@ -225,6 +233,7 @@
     // a series of session date variables
     var day2WorkshopDate = new Date("Apr 4, 2023 11:00:00").getTime();
     var day2LunchDate = new Date("Apr 4, 2023 12:30:00").getTime();
+    var day2TalkDate = new Date("Apr 4, 2023 15:00:00").getTime();
     var day2OutlineDate = new Date("Apr 5, 2023 17:00:00").getTime();
     var day2DinnerDate = new Date("Apr 5, 2023 19:30:00").getTime();
     var day3SubmissionDate = new Date("Apr 5, 2023 12:30:00").getTime();
@@ -235,13 +244,13 @@
     var day3Close = new Date("Apr 5, 2023 17:45:00").getTime();
 
     // a list of session date variables
-    var sessionDateList = [day2WorkshopDate, day2LunchDate, day2OutlineDate, 
+    var sessionDateList = [day2WorkshopDate, day2LunchDate, day2TalkDate, day2OutlineDate, 
                           day2DinnerDate, day3SubmissionDate, day3AtosDate, 
                           day3LunchDate, day3PitchingDate, day3AnnounceWinners, 
                           day3Close, "TheEnd"];
 
     // a list of session names
-    var sessionNameList = ["Day 2 Workshop: 11:00 - 11:45", "Day 2 Lunch: 12:30 - 13:30", 
+    var sessionNameList = ["Day 2 Workshop: 11:00 - 11:45", "Day 2 Lunch: 12:30 - 13:30", "Strategy Hack Workshop: 15:00 - 16:00",
                           "Project Outline & Submission Open: 17:00", "Day 2 Dinner: 19:30 - 20:00", 
                           "Submission Deadline: 12:30", "Careers at Atos", "Day 3 Lunch", 
                           "Track Pitching: 14:00 - 16:30", "Winners Announced: 17:00 - 17:30", 
@@ -295,12 +304,16 @@
     </div>
 
     <div class="front-cover-info">
+
+      
+      <p id="current-session"></p>
+
       <p id="counting"></p>
       <img id="countdown-logo" src="../junctionx_exeter_logo_white_oneline-removebg.png">
-      <p id="next-session-msg">Next Session:</p>
+      
+      <br>
+      <p id="next-session-msg">Next up:</p>
       <p id="next-session"></p>
-      <p id="current-session-msg">Current Session:</p>
-      <p id="current-session"></p>
       
     </div>
         
